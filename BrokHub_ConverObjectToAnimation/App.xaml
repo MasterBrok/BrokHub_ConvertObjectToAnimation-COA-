@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="BrokHub_ConverObjectToAnimation.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:BrokHub_ConverObjectToAnimation"
+    StartupUri="View\HomeView.xaml">
+    <Application.Resources />
+</Application>
