@@ -9,6 +9,7 @@
         <ResourceDictionary>
 
             <!--  Telegram : @BrokDotNet  -->
+            <!--  TNX  -->
             <Style TargetType="ToolTip">
                 <Setter Property="Height" Value="25" />
                 <Setter Property="Template">
