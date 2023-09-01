@@ -1,0 +1,380 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Storyboard x:Key="Button_MouseEnter">
+        <ColorAnimation
+            Storyboard.TargetProperty="(Background).(LinearGradientBrush.GradientStops)[1].Color"
+            To="#557c93"
+            Duration="0:0:0:2" />
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Background).(LinearGradientBrush.GradientStops)[1].Offset">
+            <LinearDoubleKeyFrame KeyTime="00:00:01" Value="0.7" />
+            <LinearDoubleKeyFrame KeyTime="00:00:01.3" Value="0.8" />
+            <LinearDoubleKeyFrame KeyTime="00:00:01.6" Value="0.9" />
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard
+        x:Key="BorderAnimationResultView"
+        AutoReverse="True"
+        RepeatBehavior="Forever">
+
+        <DoubleAnimation Storyboard.TargetProperty="(BorderBrush).(LinearGradientBrush.GradientStops)[0].Offset" To="0.9">
+            <DoubleAnimation.EasingFunction>
+                <SineEase EasingMode="EaseIn" />
+            </DoubleAnimation.EasingFunction>
+        </DoubleAnimation>
+
+        <DoubleAnimation
+            Storyboard.TargetProperty="(BorderBrush).(LinearGradientBrush.GradientStops)[1].Offset"
+            From="0.8"
+            To="0.1">
+
+            <DoubleAnimation.EasingFunction>
+                <SineEase EasingMode="EaseInOut" />
+            </DoubleAnimation.EasingFunction>
+        </DoubleAnimation>
+
+
+    </Storyboard>
+
+    <Storyboard x:Key="Button_MouseLeave">
+        <ColorAnimation
+            Storyboard.TargetProperty="(Background).(LinearGradientBrush.GradientStops)[1].Color"
+            To="#0b3866"
+            Duration="0:0:0:2" />
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Background).(LinearGradientBrush.GradientStops)[1].Offset">
+            <LinearDoubleKeyFrame KeyTime="00:00:01" Value="0.9" />
+            <LinearDoubleKeyFrame KeyTime="00:00:01.3" Value="0.8" />
+            <LinearDoubleKeyFrame KeyTime="00:00:01.6" Value="0.7" />
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Key="LoadedAnimationString_View">
+        <StringAnimationUsingKeyFrames Storyboard.TargetProperty="Text">
+            <DiscreteStringKeyFrame KeyTime="00:00:00.2" Value="I" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.4" Value="In" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.6" Value="Inp" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.8" Value="Inpu" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.0" Value="Input" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.2" Value="Inputs" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.4" Value="Inputs " />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.6" Value="Inputs :" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.8" Value="Inputs : " />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.0" Value="Inputs : B" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.2" Value="Inputs : Br" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.4" Value="Inputs : Bro" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.6" Value="Inputs : Brok" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.8" Value="Inputs : BrokH" />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.0" Value="Inputs : BrokHu" />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.2" Value="Inputs : BrokHub" />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.4" Value="Inputs : BrokHub " />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.6" Value="Inputs : BrokHub  " />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.8" Value="Inputs : BrokHub  ," />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.0" Value="Inputs : BrokHub  , " />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.2" Value="Inputs : BrokHub  , D" />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.4" Value="Inputs : BrokHub  , DL" />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.6" Value="Inputs : BrokHub  , DLS" />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.8" Value="Inputs : BrokHub  , DLS " />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.0" Value="Inputs : BrokHub  , DLS :" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.2" Value="Inputs : BrokHub  , DLS : " />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.4" Value="Inputs : BrokHub  , DLS : D" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.6" Value="Inputs : BrokHub  , DLS : Di" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.8" Value="Inputs : BrokHub  , DLS : Dis" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.0" Value="Inputs : BrokHub  , DLS : Disc" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.2" Value="Inputs : BrokHub  , DLS : Discr" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.4" Value="Inputs : BrokHub  , DLS : Discre" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.6" Value="Inputs : BrokHub  , DLS : Discret" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.8" Value="Inputs : BrokHub  , DLS : Discrete" />
+            <DiscreteStringKeyFrame KeyTime="00:00:07.0" Value="Inputs : BrokHub  , DLS : Discrete " />
+            <DiscreteStringKeyFrame KeyTime="00:00:07.2" Value="Inputs : BrokHub  , DLS : Discrete ," />
+            <DiscreteStringKeyFrame KeyTime="00:00:07.4" Value="Inputs : BrokHub  , DLS : Discrete , " />
+            <DiscreteStringKeyFrame KeyTime="00:00:07.6" Value="Inputs : BrokHub  , DLS : Discrete , T" />
+            <DiscreteStringKeyFrame KeyTime="00:00:07.8" Value="Inputs : BrokHub  , DLS : Discrete , Ty" />
+            <DiscreteStringKeyFrame KeyTime="00:00:08.0" Value="Inputs : BrokHub  , DLS : Discrete , Typ" />
+            <DiscreteStringKeyFrame KeyTime="00:00:08.2" Value="Inputs : BrokHub  , DLS : Discrete , Type" />
+            <DiscreteStringKeyFrame KeyTime="00:00:08.4" Value="Inputs : BrokHub  , DLS : Discrete , Type " />
+            <DiscreteStringKeyFrame KeyTime="00:00:08.6" Value="Inputs : BrokHub  , DLS : Discrete , Type :" />
+            <DiscreteStringKeyFrame KeyTime="00:00:08.8" Value="Inputs : BrokHub  , DLS : Discrete , Type : " />
+            <DiscreteStringKeyFrame KeyTime="00:00:09.0" Value="Inputs : BrokHub  , DLS : Discrete , Type : S" />
+            <DiscreteStringKeyFrame KeyTime="00:00:09.2" Value="Inputs : BrokHub  , DLS : Discrete , Type : St" />
+            <DiscreteStringKeyFrame KeyTime="00:00:09.4" Value="Inputs : BrokHub  , DLS : Discrete , Type : Str" />
+            <DiscreteStringKeyFrame KeyTime="00:00:09.6" Value="Inputs : BrokHub  , DLS : Discrete , Type : Stri" />
+            <DiscreteStringKeyFrame KeyTime="00:00:09.8" Value="Inputs : BrokHub  , DLS : Discrete , Type : Strin" />
+            <DiscreteStringKeyFrame KeyTime="00:00:10.0" Value="Inputs : BrokHub  , DLS : Discrete , Type : String" />
+            <DiscreteStringKeyFrame KeyTime="00:00:10.2" Value="Inputs : BrokHub  , DLS : Discrete , Type : StringK" />
+            <DiscreteStringKeyFrame KeyTime="00:00:10.4" Value="Inputs : BrokHub  , DLS : Discrete , Type : StringKe" />
+            <DiscreteStringKeyFrame KeyTime="00:00:10.6" Value="Inputs : BrokHub  , DLS : Discrete , Type : StringKey" />
+            <DiscreteStringKeyFrame KeyTime="00:00:10.8" Value="Inputs : BrokHub  , DLS : Discrete , Type : StringKeyF" />
+            <DiscreteStringKeyFrame KeyTime="00:00:11.0" Value="Inputs : BrokHub  , DLS : Discrete , Type : StringKeyFr" />
+            <DiscreteStringKeyFrame KeyTime="00:00:11.2" Value="Inputs : BrokHub  , DLS : Discrete , Type : StringKeyFra" />
+            <DiscreteStringKeyFrame KeyTime="00:00:11.4" Value="Inputs : BrokHub  , DLS : Discrete , Type : StringKeyFram" />
+            <DiscreteStringKeyFrame KeyTime="00:00:11.6" Value="Inputs : BrokHub  , DLS : Discrete , Type : StringKeyFrame" />
+            <DiscreteStringKeyFrame KeyTime="00:00:11.8" Value="Inputs : BrokHub  , DLS : Discrete , Type : StringKeyFrames" />
+            <DiscreteStringKeyFrame KeyTime="00:00:20" Value="Inputs : BrokHub  , DLS : Discrete , Type : StringKeyFrames" />
+        </StringAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard
+        x:Key="BulidNow"
+        AutoReverse="True"
+        BeginTime="00:00:00:02"
+        RepeatBehavior="Forever">
+        <StringAnimationUsingKeyFrames Storyboard.TargetProperty="Content">
+            <StringAnimationUsingKeyFrames.KeyFrames>
+                <DiscreteStringKeyFrame KeyTime="00:00:00" Value="" />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.1" Value="B" />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.2" Value="Bu" />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.3" Value="Bul" />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.4" Value="Buli" />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.5" Value="Bulid" />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.6" Value="Bulid " />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.7" Value="Bulid N" />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.8" Value="Bulid No" />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.9" Value="Bulid Now" />
+                <DiscreteStringKeyFrame KeyTime="00:00:01.0" Value="Bulid Now " />
+                <DiscreteStringKeyFrame KeyTime="00:00:01.1" Value="Bulid Now :" />
+                <DiscreteStringKeyFrame KeyTime="00:00:01.2" Value="Bulid Now :)" />
+                <DiscreteStringKeyFrame KeyTime="00:00:02" Value="Bulid Now :)" />
+            </StringAnimationUsingKeyFrames.KeyFrames>
+        </StringAnimationUsingKeyFrames>
+    </Storyboard>
+
+
+
+    <Storyboard x:Key="LoadedAnimationString_Result">
+        <StringAnimationUsingKeyFrames BeginTime="00:00:11" Storyboard.TargetProperty="Text">
+            <DiscreteStringKeyFrame KeyTime="00:00:00.2" Value="R" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.4" Value="Re" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.6" Value="Res" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.8" Value="Resu" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.0" Value="Resul" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.2" Value="Result" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.4" Value="Result " />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.6" Value="Result I" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.8" Value="Result Is" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.0" Value="Result Is " />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.2" Value="Result Is :" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.4" Value="Result Is : " />
+            <DiscreteStringKeyFrame KeyTime="00:00:12" Value="Result Is : " />
+        </StringAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <system:String xmlns:system="clr-namespace:System;assembly=mscorlib" x:Key="ExampleResultTag">
+        DiscreteStringKeyFrame KeyTime ="00:00:00"  Value =""
+        DiscreteStringKeyFrame KeyTime ="00:00:00.2"  Value ="B"
+        DiscreteStringKeyFrame KeyTime ="00:00:00.4"  Value ="Br"
+        DiscreteStringKeyFrame KeyTime ="00:00:00.6"  Value ="Bro"
+        DiscreteStringKeyFrame KeyTime ="00:00:00.8"  Value ="Brok"
+    </system:String>
+
+    <Storyboard x:Key="LoadedAnimationString_EndResult">
+        <StringAnimationUsingKeyFrames BeginTime="00:00:14" Storyboard.TargetProperty="Text">
+            <DiscreteStringKeyFrame KeyTime="00:00:02.8" Value="{StaticResource ExampleResultTag}" />
+        </StringAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Key="StrokeDashArray_Run">
+        <DoubleAnimationUsingKeyFrames
+            AutoReverse="True"
+            RepeatBehavior="Forever"
+            Storyboard.TargetProperty="StrokeDashOffset">
+            <DoubleAnimationUsingKeyFrames.KeyFrames>
+                <LinearDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                <LinearDoubleKeyFrame KeyTime="00:00:00.2" Value="2" />
+                <LinearDoubleKeyFrame KeyTime="00:00:00.5" Value="3" />
+                <LinearDoubleKeyFrame KeyTime="00:00:00.8" Value="4" />
+                <LinearDoubleKeyFrame KeyTime="00:00:01" Value="5" />
+                <LinearDoubleKeyFrame KeyTime="00:00:01.2" Value="6" />
+                <LinearDoubleKeyFrame KeyTime="00:00:01.5" Value="7" />
+                <LinearDoubleKeyFrame KeyTime="00:00:01.6" Value="8" />
+                <LinearDoubleKeyFrame KeyTime="00:00:01.9" Value="9" />
+                <LinearDoubleKeyFrame KeyTime="00:00:02.2" Value="10" />
+                <LinearDoubleKeyFrame KeyTime="00:00:02.5" Value="11" />
+                <LinearDoubleKeyFrame KeyTime="00:00:02.7" Value="12" />
+                <LinearDoubleKeyFrame KeyTime="00:00:02.9" Value="13" />
+                <LinearDoubleKeyFrame KeyTime="00:00:03.3" Value="14" />
+                <LinearDoubleKeyFrame KeyTime="00:00:03.5" Value="15" />
+                <LinearDoubleKeyFrame KeyTime="00:00:03.7" Value="16" />
+                <LinearDoubleKeyFrame KeyTime="00:00:04" Value="18" />
+                <LinearDoubleKeyFrame KeyTime="00:00:04.3" Value="19" />
+                <LinearDoubleKeyFrame KeyTime="00:00:04.5" Value="21" />
+                <LinearDoubleKeyFrame KeyTime="00:00:04.9" Value="22" />
+            </DoubleAnimationUsingKeyFrames.KeyFrames>
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Key="AnimationTunder" RepeatBehavior="Forever">
+        <DoubleAnimation Storyboard.TargetProperty="StrokeDashOffset" To="360">
+            <DoubleAnimation.EasingFunction>
+                <CubicEase EasingMode="EaseIn" />
+            </DoubleAnimation.EasingFunction>
+        </DoubleAnimation>
+    </Storyboard>
+
+    <Storyboard
+        x:Key="AnimationCloud"
+        AutoReverse="True"
+        RepeatBehavior="Forever">
+        <DoubleAnimation Storyboard.TargetProperty="StrokeDashOffset" To="360" />
+    </Storyboard>
+
+
+    <Storyboard x:Key="StartNow.">
+        <StringAnimationUsingKeyFrames
+            AutoReverse="True"
+            BeginTime="00:00:02"
+            RepeatBehavior="Forever"
+            Storyboard.TargetProperty="Content">
+            <DiscreteStringKeyFrame KeyTime="00:00:00.2" Value="S" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.4" Value="St" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.6" Value="Sta" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.8" Value="Star" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.0" Value="Start" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.2" Value="Start " />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.4" Value="Start N" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.6" Value="Start No" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.8" Value="Start Now" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.0" Value="Start Now " />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.5" Value="Start Now ." />
+
+        </StringAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Key="TrueValue">
+        <ThicknessAnimation
+            Storyboard.TargetName="elIs"
+            Storyboard.TargetProperty="Margin"
+            To="120 4 0 4">
+            <ThicknessAnimation.EasingFunction>
+                <SineEase EasingMode="EaseIn" />
+            </ThicknessAnimation.EasingFunction>
+        </ThicknessAnimation>
+        <DoubleAnimation
+            Storyboard.TargetName="elIs"
+            Storyboard.TargetProperty="(Effect).(BlurEffect.Radius)"
+            To="7" />
+    </Storyboard>
+
+    <Storyboard x:Key="FalseValue">
+        <ThicknessAnimation
+            Storyboard.TargetName="elIs"
+            Storyboard.TargetProperty="Margin"
+            To="5 4 0 4">
+            <ThicknessAnimation.EasingFunction>
+                <SineEase EasingMode="EaseOut" />
+            </ThicknessAnimation.EasingFunction>
+        </ThicknessAnimation>
+        <DoubleAnimation
+            Storyboard.TargetName="elIs"
+            Storyboard.TargetProperty="(Effect).(BlurEffect.Radius)"
+            To="1" />
+    </Storyboard>
+
+
+    <Storyboard x:Key="OffsetTextBox">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Background).(LinearGradientBrush.GradientStops)[1].Offset">
+            <DoubleAnimationUsingKeyFrames.KeyFrames>
+                <LinearDoubleKeyFrame KeyTime="00:00:00:00.1" Value="0.8" />
+                <LinearDoubleKeyFrame KeyTime="00:00:00:00.3" Value="0.9" />
+                <LinearDoubleKeyFrame KeyTime="00:00:00:00.4" Value="1" />
+                <LinearDoubleKeyFrame KeyTime="00:00:00:00.6" Value="1.1" />
+                <LinearDoubleKeyFrame KeyTime="00:00:00:00.7" Value="1.2" />
+                <LinearDoubleKeyFrame KeyTime="00:00:00:00.8" Value="1.3" />
+            </DoubleAnimationUsingKeyFrames.KeyFrames>
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+
+
+    <Storyboard x:Key="BrokHub_Animation">
+        <StringAnimationUsingKeyFrames
+            AccelerationRatio="0"
+            AutoReverse="True"
+            BeginTime="00:00:02"
+            DecelerationRatio="0"
+            FillBehavior="HoldEnd"
+            RepeatBehavior="Forever"
+            SpeedRatio="1"
+            Storyboard.TargetProperty="Text">
+            <DiscreteStringKeyFrame KeyTime="00:00:00.1000000" Value="H" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.2000000" Value="Hi" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.3000000" Value="Hi, " />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.4000000" Value="Hi," />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.5000000" Value="Hi , M" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.6000000" Value="Hi , My" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.7000000" Value="Hi , My N " />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.8000000" Value="Hi , My Na" />
+            <DiscreteStringKeyFrame KeyTime="00:00:00.9000000" Value="Hi , My Nam" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01" Value="Hi , My Nam" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.1000000" Value="Hi , My Name" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.2000000" Value="Hi , My Name " />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.3000000" Value="Hi , My Name i" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.4000000" Value="Hi , My Name is" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.5000000" Value="Hi , My Name is " />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.6000000" Value="Hi , My Name is B" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.7000000" Value="Hi , My Name is Br" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.8000000" Value="Hi , My Name is Bro" />
+            <DiscreteStringKeyFrame KeyTime="00:00:01.9000000" Value="Hi , My Name is Bro" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02" Value="Hi , My Name is Brok" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.1000000" Value="Hi , My Name is Brok " />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.2000000" Value="Hi , My Name is Brok . " />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.3000000" Value="Hi , My Name is Brok . " />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.4000000" Value="Hi , My Name is Brok . A" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.5000000" Value="Hi , My Name is Brok . An" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.6000000" Value="Hi , My Name is Brok . And" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.7000000" Value="Hi , My Name is Brok . And" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.8000000" Value="Hi , My Name is Brok . And t" />
+            <DiscreteStringKeyFrame KeyTime="00:00:02.9000000" Value="Hi , My Name is Brok . And th" />
+            <DiscreteStringKeyFrame KeyTime="00:00:03" Value="Hi , My Name is Brok . And thi" />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.1000000" Value="Hi , My Name is Brok . And this " />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.2000000" Value="Hi , My Name is Brok . And this " />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.3000000" Value="Hi , My Name is Brok . And this a" />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.4000000" Value="Hi , My Name is Brok . And this ap" />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.5000000" Value="Hi , My Name is Brok . And this app" />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.6000000" Value="Hi , My Name is Brok . And this app" />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.7000000" Value="Hi , My Name is Brok . And this app h" />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.8000000" Value="Hi , My Name is Brok . And this app he" />
+            <DiscreteStringKeyFrame KeyTime="00:00:03.9000000" Value="Hi , My Name is Brok . And this app hel" />
+            <DiscreteStringKeyFrame KeyTime="00:00:04" Value="Hi , My Name is Brok . And this app help" />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.1000000" Value="Hi , My Name is Brok . And this app helps " />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.2000000" Value="Hi , My Name is Brok . And this app helps " />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.3000000" Value="Hi , My Name is Brok . And this app helps y" />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.4000000" Value="Hi , My Name is Brok . And this app helps yo" />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.5000000" Value="Hi , My Name is Brok . And this app helps you" />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.6000000" Value="Hi , My Name is Brok . And this app helps you" />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.7000000" Value="Hi , My Name is Brok . And this app helps you w" />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.8000000" Value="Hi , My Name is Brok . And this app helps you wr" />
+            <DiscreteStringKeyFrame KeyTime="00:00:04.9000000" Value="Hi , My Name is Brok . And this app helps you wri" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05" Value="Hi , My Name is Brok . And this app helps you writ " />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.1000000" Value="Hi , My Name is Brok . And this app helps you write" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.2000000" Value="Hi , My Name is Brok . And this app helps you write" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.3000000" Value="Hi , My Name is Brok . And this app helps you write a" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.4000000" Value="Hi , My Name is Brok . And this app helps you write an" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.5000000" Value="Hi , My Name is Brok . And this app helps you write ani" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.6000000" Value="Hi , My Name is Brok . And this app helps you write anim" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.7000000" Value="Hi , My Name is Brok . And this app helps you write anima" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.8000000" Value="Hi , My Name is Brok . And this app helps you write animat" />
+            <DiscreteStringKeyFrame KeyTime="00:00:05.9000000" Value="Hi , My Name is Brok . And this app helps you write animati" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06" Value="Hi , My Name is Brok . And this app helps you write animatio" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.1000000" Value="Hi , My Name is Brok . And this app helps you write animation" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.2000000" Value="Hi , My Name is Brok . And this app helps you write animations " />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.3000000" Value="Hi , My Name is Brok . And this app helps you write animations " />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.4000000" Value="Hi , My Name is Brok . And this app helps you write animations m" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.5000000" Value="Hi , My Name is Brok . And this app helps you write animations mo" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.6000000" Value="Hi , My Name is Brok . And this app helps you write animations mor" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.7000000" Value="Hi , My Name is Brok . And this app helps you write animations more" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.8000000" Value="Hi , My Name is Brok . And this app helps you write animations more" />
+            <DiscreteStringKeyFrame KeyTime="00:00:06.9000000" Value="Hi , My Name is Brok . And this app helps you write animations more e" />
+            <DiscreteStringKeyFrame KeyTime="00:00:07" Value="Hi , My Name is Brok . And this app helps you write animations more ea" />
+            <DiscreteStringKeyFrame KeyTime="00:00:07.1000000" Value="Hi , My Name is Brok . And this app helps you write animations more eas" />
+            <DiscreteStringKeyFrame KeyTime="00:00:07.2000000" Value="Hi , My Name is Brok . And this app helps you write animations more easi" />
+            <DiscreteStringKeyFrame KeyTime="00:00:07.3000000" Value="Hi , My Name is Brok . And this app helps you write animations more easil" />
+            <DiscreteStringKeyFrame KeyTime="00:00:07.4000000" Value="Hi , My Name is Brok . And this app helps you write animations more easily" />
+            <DiscreteStringKeyFrame KeyTime="00:00:07.5000000" Value="Hi , My Name is Brok . And this app helps you write animations more easily." />
+            <DiscreteStringKeyFrame KeyTime="00:00:09" Value="Hi , My Name is Brok . And this app helps you write animations more easily." />
+
+        </StringAnimationUsingKeyFrames>
+    </Storyboard>
+
+
+
+</ResourceDictionary>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "00H/4PAStQRliaBug4MVC1RvBIVeGvTUxE/gaZRqLherszGHSfrsQfZYuI6/t29mnN5fWFioj31AQpawkP+ipQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Behrouz\\Desktop\\WPF(C#)\\MyProjectWPF\\BrokHub\\BrokHub_ConverObjectToAnimation\\BrokHub_ConverObjectToAnimation\\BrokHub_ConverObjectToAnimation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Behrouz\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,82 @@
+﻿<Window
+    x:Class="BrokHub_ConverObjectToAnimation.MVVM.Views.ResultView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:buttons="clr-namespace:BrokHub_ConverObjectToAnimation.BaseControls.Buttons"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BrokHub_ConverObjectToAnimation.MVVM.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:textboxs="clr-namespace:BrokHub_ConverObjectToAnimation.BaseControls.TextBoxs"
+    xmlns:view="clr-namespace:BrokHub_ConverObjectToAnimation.MVVM.ViewModels"
+    Width="650"
+    Height="550"
+    AllowsTransparency="True"
+    Background="Transparent"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <view:ResultViewModel />
+    </Window.DataContext>
+    <Border BorderThickness="3" CornerRadius="20">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="1 0" EndPoint="0 1">
+                <GradientStop Offset="0.1" Color="{Binding Source={StaticResource bgMain7}, Path=Color}" />
+                <GradientStop Offset="0.8" Color="{Binding Source={StaticResource bgMain4}, Path=Color}" />
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Border.Background>
+            <LinearGradientBrush StartPoint="1 0" EndPoint="0 1">
+                <GradientStop Offset="0.5" Color="{Binding Source={StaticResource bgMain2}, Path=Color}" />
+                <GradientStop Offset="0.02" Color="{Binding Source={StaticResource bgMain3}, Path=Color}" />
+            </LinearGradientBrush>
+        </Border.Background>
+        <Border.Triggers>
+            <EventTrigger RoutedEvent="Loaded">
+                <BeginStoryboard Storyboard="{StaticResource BorderAnimationResultView}" />
+            </EventTrigger>
+        </Border.Triggers>
+
+
+        <StackPanel>
+
+            <textboxs:ccTextBoxCOA
+                x:Name="lblReult"
+                Width="600"
+                Height="400"
+                Margin="10"
+                Padding="5"
+                VerticalContentAlignment="Top"
+                Foreground="{StaticResource bgMain2}"
+                IsReadOnly="True"
+                Opacity="0.7"
+                Text="{Binding Animation}"
+                TextWrapping="Wrap" />
+
+
+            <buttons:ccButtonMenu
+                Command="{Binding Copy}"
+                CommandParameter="{Binding ElementName=lblReult}"
+                Content="Copy">
+                <buttons:ccButtonMenu.Effect>
+                    <DropShadowEffect
+                        BlurRadius="10"
+                        Direction="123"
+                        Opacity="0.8"
+                        ShadowDepth="5"
+                        Color="{Binding Source={StaticResource bgMain5}, Path=Color}" />
+                </buttons:ccButtonMenu.Effect>
+            </buttons:ccButtonMenu>
+
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontFamily="{StaticResource Font1}"
+                Foreground="WhiteSmoke"
+                Text="{Binding IsCopy, StringFormat=Tag is Copy : {0}, UpdateSourceTrigger=LostFocus}" />
+
+        </StackPanel>
+
+
+    </Border>
+</Window>

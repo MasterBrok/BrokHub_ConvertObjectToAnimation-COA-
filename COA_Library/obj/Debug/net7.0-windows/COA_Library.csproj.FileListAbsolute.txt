@@ -1,0 +1,11 @@
+C:\Users\Behrouz\Desktop\WPF(C#)\MyProjectWPF\BrokHub\BrokHub_ConverObjectToAnimation\COA_Library\bin\Debug\net7.0-windows\COA_Library.deps.json
+C:\Users\Behrouz\Desktop\WPF(C#)\MyProjectWPF\BrokHub\BrokHub_ConverObjectToAnimation\COA_Library\bin\Debug\net7.0-windows\COA_Library.dll
+C:\Users\Behrouz\Desktop\WPF(C#)\MyProjectWPF\BrokHub\BrokHub_ConverObjectToAnimation\COA_Library\bin\Debug\net7.0-windows\COA_Library.pdb
+C:\Users\Behrouz\Desktop\WPF(C#)\MyProjectWPF\BrokHub\BrokHub_ConverObjectToAnimation\COA_Library\obj\Debug\net7.0-windows\COA_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Behrouz\Desktop\WPF(C#)\MyProjectWPF\BrokHub\BrokHub_ConverObjectToAnimation\COA_Library\obj\Debug\net7.0-windows\COA_Library.AssemblyInfoInputs.cache
+C:\Users\Behrouz\Desktop\WPF(C#)\MyProjectWPF\BrokHub\BrokHub_ConverObjectToAnimation\COA_Library\obj\Debug\net7.0-windows\COA_Library.AssemblyInfo.cs
+C:\Users\Behrouz\Desktop\WPF(C#)\MyProjectWPF\BrokHub\BrokHub_ConverObjectToAnimation\COA_Library\obj\Debug\net7.0-windows\COA_Library.csproj.CoreCompileInputs.cache
+C:\Users\Behrouz\Desktop\WPF(C#)\MyProjectWPF\BrokHub\BrokHub_ConverObjectToAnimation\COA_Library\obj\Debug\net7.0-windows\COA_Library.dll
+C:\Users\Behrouz\Desktop\WPF(C#)\MyProjectWPF\BrokHub\BrokHub_ConverObjectToAnimation\COA_Library\obj\Debug\net7.0-windows\refint\COA_Library.dll
+C:\Users\Behrouz\Desktop\WPF(C#)\MyProjectWPF\BrokHub\BrokHub_ConverObjectToAnimation\COA_Library\obj\Debug\net7.0-windows\COA_Library.pdb
+C:\Users\Behrouz\Desktop\WPF(C#)\MyProjectWPF\BrokHub\BrokHub_ConverObjectToAnimation\COA_Library\obj\Debug\net7.0-windows\ref\COA_Library.dll

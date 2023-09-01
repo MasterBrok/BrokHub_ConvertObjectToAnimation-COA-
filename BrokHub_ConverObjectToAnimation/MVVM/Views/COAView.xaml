@@ -1,0 +1,382 @@
+﻿<Window
+    x:Class="BrokHub_ConverObjectToAnimation.MVVM.Views.COAView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:buttons="clr-namespace:BrokHub_ConverObjectToAnimation.BaseControls.Buttons"
+    xmlns:checkbox="clr-namespace:BrokHub_ConverObjectToAnimation.BaseControls.CheckBoxs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BrokHub_ConverObjectToAnimation.MVVM.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resources="clr-namespace:BrokHub_ConverObjectToAnimation.MVVM.Convertors"
+    xmlns:textboxs="clr-namespace:BrokHub_ConverObjectToAnimation.BaseControls.TextBoxs"
+    xmlns:view="clr-namespace:BrokHub_ConverObjectToAnimation.MVVM.ViewModels"
+    x:Name="page"
+    Width="1250"
+    Height="600"
+    AllowsTransparency="True"
+    Background="Transparent"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <view:COAViewModel />
+    </Window.DataContext>
+    <Window.Resources>
+        <resources:ConvertBoolToFillBahavior x:Key="ConvertBoolToFillBahavior" />
+        <resources:ConvertBoolToNameFrame x:Key="ConvertBoolToFrame" />
+    </Window.Resources>
+    <Border CornerRadius="20">
+
+        <Border.Background>
+            <LinearGradientBrush StartPoint="1 0" EndPoint="0 1">
+                <GradientStop Offset="0.4" Color="{Binding Source={StaticResource bgMain2}, Path=Color}" />
+                <GradientStop Offset="0.01" Color="{Binding Source={StaticResource bgMain5}, Path=Color}" />
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Border.Triggers>
+            <EventTrigger RoutedEvent="Loaded">
+                <BeginStoryboard>
+                    <Storyboard
+                        AutoReverse="True"
+                        RepeatBehavior="Forever"
+                        Duration="00:00:03">
+                        <DoubleAnimation Storyboard.TargetProperty="(Background).(LinearGradientBrush.GradientStops)[0].Offset" To="0.8" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Border.Triggers>
+        <Grid>
+
+            <StackPanel
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Orientation="Horizontal">
+
+                <buttons:ccButtonMenu
+                    Width="40"
+                    Height="20"
+                    Margin="5"
+                    Command="{Binding Exit}"
+                    CommandParameter="{Binding ElementName=page}"
+                    ToolTip="Exit" />
+
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="Orientation" Value="Horizontal" />
+                    </Style>
+                    <Style BasedOn="{StaticResource LabelTitle}" TargetType="Label" />
+                </StackPanel.Resources>
+                <GroupBox
+                    Width="330"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    BorderBrush="White"
+                    BorderThickness="1"
+                    FontFamily="{StaticResource Font1}"
+                    Foreground="{StaticResource bgMain1}"
+                    Header="Create Tags">
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Hidden">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel.Resources>
+                                <Style TargetType="StackPanel">
+                                    <Setter Property="Orientation" Value="Horizontal" />
+                                </Style>
+                            </StackPanel.Resources>
+
+                            <StackPanel>
+                                <Label Content="KeyTime" Style="{StaticResource LabelTitle}" />
+                                <textboxs:ccTextBoxCOA Text="{Binding Frame.Time}" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <Label Content="JumpTime" Style="{StaticResource LabelTitle}" />
+                                <textboxs:ccTextBoxCOA Text="{Binding JumpTime}" />
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Content="Inputs" Style="{StaticResource LabelTitle}" />
+                                <textboxs:ccTextBoxCOA
+                                    Height="150"
+                                    Padding="5"
+                                    VerticalContentAlignment="Top"
+                                    AcceptsReturn="True"
+                                    Text="{Binding Frame.Value, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}"
+                                    TextWrapping="Wrap"
+                                    ToolTip="Double : Value1 , Value2 || String : Value1 || Colors : Value1 , Value2 , ..." />
+                            </StackPanel>
+
+                            <GroupBox
+                                Margin="5,10,0,0"
+                                BorderBrush="{StaticResource bgMain5}"
+                                BorderThickness="1"
+                                Foreground="White"
+                                Header="DLS">
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel>
+                                        <Label
+                                            Content="D"
+                                            Style="{StaticResource LabelTitle}"
+                                            ToolTip="Discrete" />
+                                        <checkbox:ccCheckBox
+                                            x:Name="D"
+                                            Tag="D"
+                                            ToolTip="Discrete" />
+                                    </StackPanel>
+
+                                    <StackPanel>
+                                        <Label
+                                            Content="L"
+                                            Style="{StaticResource LabelTitle}"
+                                            ToolTip="Linear" />
+                                        <checkbox:ccCheckBox
+                                            x:Name="L"
+                                            Tag="L"
+                                            ToolTip="Linear" />
+                                    </StackPanel>
+
+                                    <StackPanel IsEnabled="False">
+                                        <Label
+                                            Content="S"
+                                            Style="{StaticResource LabelTitle}"
+                                            ToolTip="Spline" />
+                                        <checkbox:ccCheckBox
+                                            x:Name="S"
+                                            Tag="S"
+                                            ToolTip="Spline" />
+                                    </StackPanel>
+
+                                    <GroupBox
+                                        Margin="10"
+                                        Header="Spline Animation Parameter"
+                                        IsEnabled="{Binding ElementName=S, Path=IsChecked}">
+
+                                        <StackPanel Orientation="Vertical">
+                                            <StackPanel>
+                                                <Label Content="X1" Style="{StaticResource LabelTitle}" />
+                                                <textboxs:ccTextBoxCOA Text="{Binding X1}" />
+                                            </StackPanel>
+                                            <StackPanel>
+                                                <Label Content="X2" Style="{StaticResource LabelTitle}" />
+                                                <textboxs:ccTextBoxCOA Text="{Binding X2}" />
+                                            </StackPanel>
+                                            <StackPanel>
+                                                <Label Content="X3" Style="{StaticResource LabelTitle}" />
+                                                <textboxs:ccTextBoxCOA Text="{Binding X3}" />
+                                            </StackPanel>
+                                            <StackPanel>
+                                                <Label Content="X4" Style="{StaticResource LabelTitle}" />
+                                                <textboxs:ccTextBoxCOA Text="{Binding X4}" />
+                                            </StackPanel>
+                                        </StackPanel>
+
+                                    </GroupBox>
+                                </StackPanel>
+
+                            </GroupBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </GroupBox>
+
+                <GroupBox
+                    Margin="5,10,0,0"
+                    VerticalAlignment="Top"
+                    BorderBrush="{StaticResource bgMain5}"
+                    BorderThickness="1"
+                    FontFamily="{StaticResource Font1}"
+                    Foreground="{StaticResource bgMain1}"
+                    Header="Frame">
+                    <StackPanel Orientation="Vertical">
+
+                        <StackPanel>
+                            <Label Content="String" ToolTip="String Animation KeyFrames" />
+                            <checkbox:ccCheckBox
+                                x:Name="CCString"
+                                IsChecked="{Binding Type, Converter={StaticResource ConvertBoolToFrame}, ConverterParameter=String}"
+                                Tag="String" />
+                        </StackPanel>
+
+                        <StackPanel>
+                            <Label Content="Double" ToolTip="Double Animation KeyFrames" />
+                            <checkbox:ccCheckBox
+                                x:Name="CCDouble"
+                                IsChecked="{Binding Type, Converter={StaticResource ConvertBoolToFrame}, ConverterParameter=Double}"
+                                Tag="Double" />
+                        </StackPanel>
+
+
+                        <StackPanel>
+                            <Label Content="Color" ToolTip="Color Animation KeyFrames" />
+                            <checkbox:ccCheckBox
+                                x:Name="CCColor"
+                                IsChecked="{Binding Type, Converter={StaticResource ConvertBoolToFrame}, ConverterParameter=Color}"
+                                Tag="Color" />
+                        </StackPanel>
+
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox
+                    Margin="10"
+                    BorderBrush="{StaticResource bgMain5}"
+                    BorderThickness="1"
+                    FontFamily="{StaticResource Font1}"
+                    Foreground="{StaticResource bgMain1}"
+                    Header="Animation Key Frame">
+
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Hidden">
+                        <StackPanel Orientation="Vertical">
+
+
+                            <StackPanel>
+                                <Label Content="IsAdditive" />
+                                <checkbox:ccCheckBox IsChecked="{Binding TagAnimation.AnimationBase.IsAdditive, NotifyOnTargetUpdated=True}" />
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Content="IsCumalative" />
+                                <checkbox:ccCheckBox IsChecked="{Binding TagAnimation.AnimationBase.IsCumulative}" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <Label Content="AutoReverse" />
+                                <checkbox:ccCheckBox IsChecked="{Binding TagAnimation.AnimationBase.AutoReverse}" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <Label Content="AccelerationRatio" />
+                                <textboxs:ccTextBoxCOA Text="{Binding TagAnimation.AnimationBase.AccelerationRatio}" />
+                            </StackPanel>
+
+
+                            <StackPanel>
+                                <Label Content="RepeatBehavior" />
+                                <textboxs:ccTextBoxCOA Text="{Binding TagAnimation.AnimationBase.RepeatBehavior}" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <Label Content="DecelerationRatio" />
+                                <textboxs:ccTextBoxCOA Text="{Binding TagAnimation.AnimationBase.DecelerationRatio}" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <Label Content="SpeedRatio" />
+                                <textboxs:ccTextBoxCOA Text="{Binding TagAnimation.AnimationBase.SpeedRatio}" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <Label Content="Duration" />
+                                <textboxs:ccTextBoxCOA Text="{Binding TagAnimation.AnimationBase.Duration}" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <Label Content="BeginTime" />
+                                <textboxs:ccTextBoxCOA Text="{Binding TagAnimation.AnimationBase.BeginTime}" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <Label Content="FillBehavior" />
+                                <Label>
+                                    <Label.Style>
+                                        <Style BasedOn="{StaticResource LabelTitle}" TargetType="Label">
+                                            <Setter Property="FontSize" Value="10" />
+                                            <Setter Property="Foreground" Value="LightCyan" />
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding ElementName=HS, Path=IsChecked}" Value="True" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Content" Value="HoldEnd" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding ElementName=HS, Path=IsChecked}" Value="False" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Content" Value="Stop" />
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Label.Style>
+                                </Label>
+                                <checkbox:ccCheckBox x:Name="HS" IsChecked="{Binding TagAnimation.AnimationBase.FillBehavior, Converter={StaticResource ConvertBoolToFillBahavior}}" />
+                            </StackPanel>
+
+                            <GroupBox
+                                Margin="5"
+                                FontFamily="{StaticResource Font2}"
+                                Header="BrokStoryboard">
+                                <StackPanel Orientation="Vertical">
+
+                                    <StackPanel>
+                                        <Label Content="Storyboard TargetProperty" />
+                                        <textboxs:ccTextBoxCOA Text="{Binding TagAnimation.AnimationBase.Storyboard.TargetProperty}" />
+                                    </StackPanel>
+
+                                    <StackPanel>
+                                        <Label Content="Storyboard Target Name" />
+                                        <textboxs:ccTextBoxCOA Text="{Binding TagAnimation.AnimationBase.Storyboard.TargetName}" />
+                                    </StackPanel>
+
+                                    <StackPanel>
+                                        <Label Content="Storyboard Target" />
+                                        <textboxs:ccTextBoxCOA Text="{Binding TagAnimation.AnimationBase.Storyboard.Target}" />
+                                    </StackPanel>
+
+                                </StackPanel>
+                            </GroupBox>
+
+                        </StackPanel>
+                    </ScrollViewer>
+
+                </GroupBox>
+
+                <StackPanel VerticalAlignment="Center">
+                    <buttons:ccButtonMenu
+                        Margin="0,-5,0,0"
+                        Command="{Binding BuildFrame}"
+                        ToolTip="Start">
+                        <buttons:ccButtonMenu.Style>
+                            <Style BasedOn="{x:Null}" TargetType="{x:Type buttons:ccButtonMenu}">
+                                <Style.Triggers>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding ElementName=L, Path=IsChecked}" Value="True" />
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="CommandParameter" Value="{Binding ElementName=L}" />
+                                    </MultiDataTrigger>
+
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding ElementName=D, Path=IsChecked}" Value="True" />
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="CommandParameter" Value="{Binding ElementName=D}" />
+                                    </MultiDataTrigger>
+
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding ElementName=S, Path=IsChecked}" Value="True" />
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="CommandParameter" Value="{Binding ElementName=S}" />
+                                    </MultiDataTrigger>
+
+                                </Style.Triggers>
+                            </Style>
+                        </buttons:ccButtonMenu.Style>
+                        <buttons:ccButtonMenu.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard Storyboard="{StaticResource BulidNow}" />
+                            </EventTrigger>
+                        </buttons:ccButtonMenu.Triggers>
+                    </buttons:ccButtonMenu>
+                </StackPanel>
+
+            </StackPanel>
+
+
+        </Grid>
+    </Border>
+</Window>
+
